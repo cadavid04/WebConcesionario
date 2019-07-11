@@ -18,8 +18,8 @@
         <h1>Listado de vehiculos</h1>
         <c:forEach var="a" items = "${Vehiculos}">
             |${a.id}| |${a.marca}| |${a.matricula}||${a.modelo}||${a.color}|
-            <a onclick="return confirm('Esta seguro?')" href="consesionarioServlet?action=delete&identificacion=${a.id}">Delete</a> 
-            <a onclick="return confirm('Esta seguro?')" href="consesionarioServlet?action=findID&identificacion=${a.id}">Buscar</a>  
+            <a onclick="return confirm('Esta seguro?')" href="consesionarioServlet?action=deleteVehiculo&id=${a.id}">Delete</a> 
+            <a onclick="return confirm('Esta seguro?')" href="consesionarioServlet?action=findID&id=${a.id}">Buscar</a>  
 
             <hr/>
         </c:forEach>

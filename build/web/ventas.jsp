@@ -18,8 +18,8 @@
         <h1>Listado de ventas</h1>
         <c:forEach var="a" items = "${Ventas}">
             |${a.factura}| |${a.fecha}| |${a.idCliente}||${a.valor}|
-            <a onclick="return confirm('Esta seguro?')" href="consesionarioServlet?action=delete&identificacion=${a.factura}">Delete</a> 
-            <a onclick="return confirm('Esta seguro?')" href="consesionarioServlet?action=findID&identificacion=${a.factura}">Buscar</a>  
+            <a onclick="return confirm('Esta seguro?')" href="consesionarioServlet?action=deleteVenta&factura=${a.factura}">Delete</a> 
+            <a onclick="return confirm('Esta seguro?')" href="consesionarioServlet?action=findID&factura=${a.factura}">Buscar</a>  
 
             <hr/>
         </c:forEach>

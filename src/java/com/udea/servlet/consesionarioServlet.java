@@ -120,9 +120,23 @@ public class consesionarioServlet extends HttpServlet {
                 
                 case "delete":{
                     String identificacion = request.getParameter("identificacion");
-                    Clientes a = clientesFacade.find(Integer.valueOf(identificacion));
-                    clientesFacade.remove(a);
+                    Clientes v = clientesFacade.find(Integer.valueOf(identificacion));
+                    clientesFacade.remove(v);
                     url = "consesionarioServlet?action=list";
+                        break;
+                    }
+                case "deleteVenta":{
+                    String factura = request.getParameter("factura");
+                    Ventas ven = ventasFacade.find(Integer.valueOf(factura));
+                    ventasFacade.remove(ven);
+                    url = "consesionarioServlet?action=listVenta";
+                        break;
+                    }
+                case "deleteVehiculo":{
+                    String id= request.getParameter("id");
+                    Vehiculos veh = vehiculosFacade.find(Integer.valueOf(id));
+                    vehiculosFacade.remove(veh);
+                    url = "consesionarioServlet?action=listVehiculo";
                         break;
                     }
               
